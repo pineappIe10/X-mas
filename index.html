@@ -1,33 +1,183 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>파인애플 설문조사</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background: #f5f5f5;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14532d">
+  <title>🍍 Pineapple Forms</title>
 
-        iframe {
-            width: 100%;
-            max-width: 640px;
-            height: 1195px;
-            border: none;
-            background: white;
-        }
-    </style>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: #14532d;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Pretendard", "Noto Sans KR", sans-serif;
+      color: #fff;
+      background: linear-gradient(
+        160deg,
+        #123f2b 0%,
+        #176b45 28%,
+        #8f2035 65%,
+        #541524 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 12px 0 28px;
+    }
+
+    .header .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: clamp(25px, 4vw, 36px);
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      color: #e5e7eb;
+      font-size: 14px;
+    }
+
+    .form-card {
+      width: 100%;
+      padding: 12px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
+      overflow: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 1500px;
+      border: 0;
+      border-radius: 18px;
+      background: white;
+    }
+
+    .footer {
+      text-align: center;
+      padding-top: 24px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 12px;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1200px;
+      }
+
+      iframe {
+        height: 1550px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 12px 32px;
+      }
+
+      .header {
+        padding: 10px 0 20px;
+      }
+
+      .header .icon {
+        font-size: 34px;
+      }
+
+      .form-card {
+        padding: 6px;
+        border-radius: 20px;
+      }
+
+      iframe {
+        height: 1550px;
+        border-radius: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 14px 8px 24px;
+      }
+
+      .header h1 {
+        font-size: 25px;
+      }
+
+      .header p {
+        font-size: 12px;
+      }
+
+      .form-card {
+        padding: 3px;
+        border-radius: 16px;
+      }
+
+      iframe {
+        height: 1600px;
+        border-radius: 12px;
+      }
+    }
+  </style>
 </head>
-<body>
-    <h2>🍍 설문조사</h2>
 
-    <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfyx6d6sa0LCowkEE2__NgM1ymoclT13ranslwg4NOWkMbmFw/viewform?embedded=true">
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="icon">🎄</div>
+      <h1>Pineapple Forms</h1>
+      <p>따뜻한 크리스마스, 소중한 의견을 들려주세요 🍍</p>
+    </header>
+
+    <section class="form-card">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfyx6d6sa0LCowkEE2__NgM1ymoclT13ranslwg4NOWkMbmFw/viewform?embedded=true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0">
         로드 중…
-    </iframe>
+      </iframe>
+    </section>
+
+    <footer class="footer">
+      <p>🎁 Made with Pineapple</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyx6d6sa0LCowkEE2__NgM1ymoclT13ranslwg4NOWkMbmFw/viewform"
+         target="_blank" rel="noopener">
+        설문지 새 창에서 열기
+      </a>
+    </footer>
+  </main>
 </body>
 </html>
